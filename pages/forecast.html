@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    
+    
+<body>
+    
+
+    
+forecast for {{ city }}
+<hr />
+
+<hr />
+
+
+<div ng-repeat="w in weatherResult.list">
+    <div class="row">
+        <div class="col-md-12">
+            
+            <weather-report weather-day="w" convert-to-standard="convertToCelsius(daytimeTemp)" convert-to-date="convertToDate(dt)" date-format="d MMMM, y. hh a" ></weather-report>
+            
+            <anar-weather weather-day="w"  convert-to-fahrenheit="convertToFahrenheit(daytimeTemp)" convert-to-date="convertToDate(dt)" show-rainy="showRainy(rain)" date-format="d MMMM, y. hh a" ></anar-weather>
+    
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+

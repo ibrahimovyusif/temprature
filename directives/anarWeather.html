@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+    
+    <div class="panel-heading">
+        <h3 class="panel-title"> {{ convertToDate({ dt: weatherDay.dt}) | date: dateFormat }}  </h3>
+    </div>
+
+    <div class = "panel-body">
+        Daytime temprature with fahrenheit: {{ convertToFahrenheit({ daytimeTemp: weatherDay.main.temp }) }} °f
+    </div>
+ 
+    <div class = "panel-body">
+        Min with fahrenheit: {{ convertToFahrenheit({ daytimeTemp: weatherDay.main.temp_min }) }} °f
+    </div>
+    
+    <div class = "panel-body">
+        Max with fahrenheit: {{ convertToFahrenheit({ daytimeTemp: weatherDay.main.temp_max }) }} °f
+    </div>
+    <div class = "panel-body">
+        Rain: {{ showRainy({ rain: weatherDay.rain["3h"] }) }}
+      
+    </div>        
+    <img id="image" ng-src="{{ weatherDay.imgSrc }}" alt="raining" style="width:144px;height:112px;"></img>
+{{ imgSrc }} asasasas
+ 
+</div>
